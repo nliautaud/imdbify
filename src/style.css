@@ -1,0 +1,73 @@
+.row {
+    margin: 2em 0;
+}
+
+.drop-zone {
+    height: 16em;
+    overflow: hidden;
+    line-height: 16em;
+    text-align: center;
+    cursor: pointer;
+
+    border: 1px solid #ccc;
+    outline: 2px dashed #ccc;
+    outline-offset: -1em;
+    color: #888;
+    transition: .2s all;
+}
+    .dragover .drop-zone {
+        background: #d9edf7;
+        border-color: #bcdff1;
+        outline: 2px dashed #397ab7;
+        color: #397ab7;
+    }
+    .load .drop-zone {
+        height: 4em;
+        line-height: 4em;
+    }
+
+.row.progress {
+    opacity: 0;
+    visibility: hidden;
+    height: auto;
+    text-align: center;
+    width: 20em;
+    margin: 2em auto;
+}
+    .load .progress {
+        opacity: 1;
+        visibility: visible;
+    }
+    .progress-bar {
+        transition: none;
+        font-size: 14px;
+    }
+
+table {
+    white-space: nowrap;
+    table-layout: fixed;
+}
+    th, td {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        min-width: 3em;
+    }
+    tr>*:nth-child(1),
+    tr>*:nth-child(4),
+    tr>*:nth-child(5),
+    tr>*:nth-child(9),
+    tr>*:nth-child(10),
+    tr>*:nth-child(11),
+    tr>*:nth-child(12) {
+        width: 3.5em;
+    }
+    tr>*:nth-child(2),
+    tr>*:nth-child(7),
+    tr>*:nth-child(14),
+    tr>*:nth-child(15),
+    tr>*:nth-child(16) {
+        width: 6em;
+    }
+    tr>*:nth-child(3) {
+        width: 8em;
+    }
