@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>imdbify - Convert a movie list to IMDb-like CSV</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.1/moment.min.js"></script>
+  <script type="text/javascript" src="src/main.js"></script>
+  <link rel="stylesheet" href="src/style.css">
+</head>
+
+<body>
+  <main class="container">
+    <div class="row">
+      <h1>imdbify</h1>
+      <p>Convert a movie list to a IMDb "<em>Export this list</em>"-like CSV file.</p>
+      <p>Drop a file containing <a href="http://imdb.com">IMDb</a> identifiers like <code>tt0654974</code> to get a <em>CSV</em> file similar to the ones exported from IMDb, that you can use to feed services asking only for a IMDb export file (ex. <a href="https://icheckmovies.com">icheckmovies</a>, Trakt.tv trough <a href="https://github.com/damienhaynes/TraktRater">TraktRater</a>, SensCritique trough imdb2senscritique...).</p>
+      <p>Trakt.tv backup files from <a href="http://eclectide.com/blog/2014/08/12/trakt-tv-backup">trakt-tv-backup</a> will be further recognized to include user dates and ratings.</p>
+      <p>Data is retrieved trough <a href="www.omdbapi.com">OMDb API</a>.</p>
+    </div>
+    <div class="row drop-zone">Drop a file</div>
+    <div class="row progress">
+      <a type="button" class="progress-bar btn btn-primary btn-lg" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="0" style="width:0"></a>
+    </div>
+  </main>
+  <div class="container-fluid htmlOutput"></div>
+</body>
+
+</html>
